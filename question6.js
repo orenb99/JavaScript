@@ -1,23 +1,25 @@
 "use strict"
-const studentsArray= ["David","Vinoth","Divya","Ishitha","Thomas"];
 const gradesArray=[80,77,88,95,68];
+let grade="";
+let avg=0;
 for(let i=0;i<gradesArray.length;i++){
-    let grade="";
-    if(gradesArray[i]<60){
+    avg+=gradesArray[i];
+}
+avg/=gradesArray.length;
+    if(avg<60){
         grade="F";
     }
     else
-    if(gradesArray[i]<70&&gradesArray[i]>=60){
+    if(avg<70&&avg>=60){
         grade="D";
     }
-    if(gradesArray[i]<80&&gradesArray[i]>=70){
+    if(avg<80&&avg>=70){
         grade="C";
     }
-    if(gradesArray[i]<90&&gradesArray[i]>=80){
+    if(avg<90&&avg>=80){
         grade="B";
     }
-    if(gradesArray[i]<=100&&gradesArray[i]>=90){
+    if(avg<=100&&avg>=90){
         grade="A";
     }
-    console.log(studentsArray[i] + " got " +grade);
-}
+    alert("The students got: "+ avg +", and their average mark is: " +grade+".");
