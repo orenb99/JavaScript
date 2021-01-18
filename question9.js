@@ -1,6 +1,15 @@
 "use strict"
+function divide(x){
+    let arr=[];
+    while(x!==0){
+        let dig=x%10;
+        arr.unshift(dig);
+        x=(x-dig)/10;
+    }
+    return arr;
+}
+
 let sum=0;
-let i=222;
-    let dig1=i%10;
-    let dig2=(i%100)/10;
-    let dig3=(i%1000)/100;
+for(let i=100;i<999;i++){
+    
+}
